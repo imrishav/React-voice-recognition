@@ -2,8 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 
 import { GlobalContext } from '../context/GlobalState';
 
-import { colors, isDark } from '../utils/colors';
-import { ColorList } from './ColorList';
+import { isDark } from '../utils/colors';
 
 const Colors = () => {
   const [currentColor, setCurrentColor] = useState(false);

@@ -1,8 +1,6 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 
-import { GlobalContext } from '../context/GlobalState';
-
-import { colors, isDark } from '../utils/colors';
+import { colors } from '../utils/colors';
 import { ColorList } from './ColorList';
 
 const Colors = () => {
@@ -12,7 +10,6 @@ const Colors = () => {
   useEffect(() => {
     setColors(colorArray);
   }, []);
-  const context = useContext(GlobalContext);
 
   return (
     <div className="colors" style={{ backgroundColor: 'green' }}>
