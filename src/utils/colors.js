@@ -150,6 +150,7 @@ export const colors = {
 };
 
 export function isDark(colorName) {
+  if (!colorName) return;
   const hex = colors[colorName].substring(1, 7);
   const r = parseInt(hex.substring(0, 2), 16);
   const g = parseInt(hex.substring(2, 4), 16);

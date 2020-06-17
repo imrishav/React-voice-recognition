@@ -1,17 +1,23 @@
-import React from "react";
+import React, { useContext } from 'react';
 
-import Colors from "./components/Colors";
-import Speech from "./utils/Speech";
-import { GlobalState } from "./context/GlobalState";
+import Colors from './components/Colors';
+import Header from './components/Header';
+import Wrapper from './components/Wrapper';
+import Speech from './utils/Speech';
+import { GlobalState, GlobalContext } from './context/GlobalState';
 
-import "./App.css";
+import './App.css';
 
 function App() {
+  const context = useContext(GlobalContext);
+  console.log('context', context.colorName);
   return (
     <GlobalState>
-      <Speech />
-      <h1>Say A Colossr</h1>
-      <Colors />
+      <Wrapper>
+        <Header />
+        <Speech />
+        <Colors />
+      </Wrapper>
     </GlobalState>
   );
 }
